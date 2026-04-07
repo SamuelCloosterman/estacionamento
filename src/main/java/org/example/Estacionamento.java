@@ -10,8 +10,7 @@ public class Estacionamento {
         this.vagas = new ArrayList<>();
 
         for(int i = 1; i <= totalDeVagas; i++){
-            Vaga novaVaga = new Vaga(i);
-            this.vagas.add(novaVaga);
+
         }
     }
 }

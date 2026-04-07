@@ -1,11 +1,14 @@
 package org.example;
+import java.util.Scanner;
 
 
 
 public class Main {
     static void main() {
         Scanner scanner = new Scanner(System.in);
-        Estacionamento estacionamento = new Estacionamento(totalDeVagas:10);
+        int opcao;
+        Estacionamento estacionamento = new Estacionamento(10);
+
         do {
             System.out.println("\nMENU");
             System.out.println("\n1 - Registrar entrada");
@@ -25,7 +28,7 @@ public class Main {
                 case 2:
                 break;
 
-                case 3:estacionamento.exibirVagasLivres();
+                case 3:
                 break;
             }
         }while(opcao != 4);
