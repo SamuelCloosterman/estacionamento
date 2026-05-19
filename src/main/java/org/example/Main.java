@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 
 public class Main {
-    static void main() {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int opcao;
         Estacionamento estacionamento = new Estacionamento(10);
@@ -23,15 +23,24 @@ public class Main {
 
             switch(opcao){
                 case 1:
+                    System.out.println("Digite a placa:");
+                    String placa = scanner.nextLine();
+                    System.out.println("Digite o modelo:");
+                    String modelo = scanner.nextLine();
+                    estacionamento.registrarEntrada(placa, modelo);
                 break;
 
                 case 2:
+                    System.out.println("Digite a placa:");
+                    String placaSaida = scanner.nextLine();
+                    estacionamento.registrarSaida(placaSaida);
                 break;
 
                 case 3:
+                estacionamento.exibirVagas();
                 break;
             }
         }while(opcao != 4);
-        System.out.println("o usuario saiu do sistema.");
+        System.out.println(" o usuario saiu do sistema.");
     }
 }
